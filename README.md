@@ -1,9 +1,5 @@
 # Feasibility of controlling 2019-nCoV outbreaks by isolation of cases and contacts
 
-```diff
-- This repository is under active development and is subject to change as the analysis evolves
-```
-
 ## Abstract
 
 
