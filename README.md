@@ -2,7 +2,6 @@
 
 ## Abstract
 
-
 **Background:** To assess the viability of isolation and contact tracing to control onwards transmission from imported cases of 2019-nCoV.
 
 **Methods:** We developed a stochastic transmission model, parameterised to the 2019-nCoV outbreak. We used the model to quantify the potential effectiveness of contact tracing and isolation of cases at controlling a 2019 nCoV-like pathogen. We considered scenarios that varied in: the number of initial cases; the basic reproduction number R0; the delay from symptom onset to isolation; the probability contacts were traced; the proportion of transmission that occurred before symptom onset, and the proportion of subclinical infections. We assumed isolation prevented all further transmission in the model. Outbreaks were deemed controlled if transmission ended within 12 weeks or before 5000 cases in total. We measured the success of controlling outbreaks using isolation and contact tracing, and quantified the weekly maximum number of cases traced to measure feasibility of public health effort. 
@@ -18,29 +17,7 @@
 Set your working directory to the home directory of this project (or use the provided Rstudio project). Install the analysis and all dependencies with: 
 
 ```r
-remotes::install_github("epiforecasts/ringbp", dependencies = TRUE)
-```
-
-### Run a single scenario
-
-Run a single scenario for a 100 simulations.
-
-```r
-library(ringbp)
-library(ggplot2)
-
-res <- ringbp::scenario_sim(n.sim = 10, num.initial.cases = 1,prop.asym=0,
-                     prop.ascertain = 0.2, cap_cases = 4500, cap_max_days = 350,
-                     r0isolated = 0, r0community = 2.5, disp.com = 0.16, disp.iso = 1, delay_shape = 1.651524,
-                     delay_scale = 4.287786,k = 0, quarantine = FALSE)
-
-# Plot of weekly cases
-ggplot2::ggplot(data=res, ggplot2::aes(x=week, y=cumulative, col = as.factor(sim))) +
-  ggplot2::geom_line(show.legend = FALSE, alpha=0.3) +
-  ggplot2::scale_y_continuous(name="Number of cases") + 
-  ggplot2::theme_bw()
-
-ringbp::extinct_prob(res,cap_cases = 4500)
+remotes::install_github("cmmid/ringbp_ncov", dependencies = TRUE)
 ```
 
 ### Run the full analysis
@@ -88,4 +65,3 @@ To access the command line run the following:
 ```{bash, eval = FALSE}
 docker exec -ti ringbp bash
 ```
-
