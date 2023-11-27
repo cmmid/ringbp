@@ -21,7 +21,7 @@
 #' }
 make_figure_S1 <- function(res = NULL) {
 
-  sub_plotS1 <- purrr::partial(ringbp::sub_plot,
+  sub_plotS1 <- purrr::partial(sub_plot,
                                res.in = res,
                                index_R0.in = c(1.5, 2.5, 3.5),
                                col.by = "index_R0")
@@ -89,7 +89,7 @@ make_figure_S1 <- function(res = NULL) {
 #' }
 make_figure_S2 <- function(res = NULL) {
 
-  sub_plotS2 <- purrr::partial(ringbp::sub_plot,
+  sub_plotS2 <- purrr::partial(sub_plot,
                                res.in = res,
                                num.initial.cases = c(5, 20, 40),
                                col.by = "num.initial.cases")
@@ -155,7 +155,7 @@ make_figure_S2 <- function(res = NULL) {
 #' }
 make_figure_S3 <- function(res = NULL) {
 
-  sub_plotS3 <- purrr::partial(ringbp::sub_plot,
+  sub_plotS3 <- purrr::partial(sub_plot,
                                res.in = res,
                                delay = c("SARS", "Wuhan"),
                                col.by = "delay")
@@ -214,7 +214,7 @@ make_figure_S3 <- function(res = NULL) {
 #' }
 make_figure_S4 <- function(res = NULL) {
 
-  sub_plotS4 <- purrr::partial(ringbp::sub_plot,
+  sub_plotS4 <- purrr::partial(sub_plot,
                                res.in = res,
                                theta.in = c("<1%", "15%", "30%"),
                                col.by = "theta")
