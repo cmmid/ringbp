@@ -1,12 +1,9 @@
 library(ringbp)
-library(tidyverse)
-
-# Make the log file
-logs <- file.path("log.txt")
-con <- file(logs, open = "wt")
-# # Send Output to log
-sink(con)
-sink(con, type = "message")
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(future)
+library(tibble)
 
 scenarios <- tidyr::expand_grid(
   ## Put parameters that are grouped by disease into this data.frame
@@ -20,6 +17,7 @@ scenarios <- tidyr::expand_grid(
     k = c(30, 1.95, 0.7)
   )),
   index_R0 = c(1.5, 2.5, 3.5),
+  quarantine = FALSE,
   prop.asym = c(0, 0.1),
   control_effectiveness = seq(0, 1, 0.2),
   num.initial.cases = c(5, 20, 40)) %>%
@@ -33,12 +31,11 @@ sim_with_params <- purrr::partial(ringbp::scenario_sim,
                                   cap_cases = 5000,
                                   r0isolated = 0,
                                   disp.iso = 1,
-                                  disp.com = 0.16,
-                                  quarantine = FALSE)
+                                  disp.com = 0.16)
 
 ## Set up multicore if using see ?future::plan for details
 ## Use the workers argument to control the number of cores used.
-future::plan("multiprocess")
+future::plan("multisession")
 
 
 ## Run paramter sweep
@@ -48,6 +45,3 @@ sweep_results <- ringbp::parameter_sweep(scenarios,
                                          show_progress = TRUE)
 
 saveRDS(sweep_results, file = "data-raw/res.rds")
-
-sink(type = "message")
-sink()
