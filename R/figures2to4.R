@@ -180,7 +180,7 @@ make_figure_3a <- function(df = NULL) {
 #'\dontrun{
 #'make_figure_3b()
 #'}
-make_figure3b <- function(df = NULL) {
+make_figure_3b <- function(df = NULL) {
   df_extracted <-  df %>%
     dplyr::mutate(effective_r0 = purrr::map(
       sims,
