@@ -6,9 +6,6 @@
 \usage{
 make_figure_2()
 }
-\value{
-
-}
 \description{
 Constructs figure 2 from the manuscript
 }

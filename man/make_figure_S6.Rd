@@ -6,14 +6,8 @@
 \usage{
 make_figure_S6()
 }
-\value{
-
-}
 \description{
 Constructs figure S6 from supplementary material
-}
-\examples{
-
 }
 \author{
 Joel Hellewell

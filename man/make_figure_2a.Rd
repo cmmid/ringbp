@@ -6,14 +6,8 @@
 \usage{
 make_figure_2a()
 }
-\value{
-
-}
 \description{
 Makes Figure 2a from manuscript
-}
-\examples{
-
 }
 \author{
 Joel Hellewell
