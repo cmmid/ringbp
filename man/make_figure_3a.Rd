@@ -9,9 +9,6 @@ make_figure_3a(df = NULL)
 \arguments{
 \item{df}{}
 }
-\value{
-
-}
 \description{
 Construct Figure 3a from manuscript
 }

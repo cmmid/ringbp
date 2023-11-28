@@ -9,9 +9,6 @@ make_figure_4(res = NULL)
 \arguments{
 \item{res}{}
 }
-\value{
-
-}
 \description{
 Construct Figure 4 from the manuscript
 }

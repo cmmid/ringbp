@@ -6,14 +6,8 @@
 \usage{
 make_figure_S7()
 }
-\value{
-
-}
 \description{
 Plots the impact of dispersion on the distribution of new cases
-}
-\examples{
-
 }
 \author{
 Sam Abbott
