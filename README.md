@@ -17,8 +17,10 @@
 Set your working directory to the home directory of this project (or use the provided Rstudio project). Install the analysis and all dependencies with: 
 
 ```r
-remotes::install_github("cmmid/ringbp_ncov", dependencies = TRUE)
+remotes::install_github("cmmid/ringbp", dependencies = TRUE)
 ```
+
+The dependencies that this will install include the [ringbp](https://github.com/epiforecasts/ringbp) R package that was initially developed to conduct the analyses in this paper.
 
 ### Run the full analysis
 
