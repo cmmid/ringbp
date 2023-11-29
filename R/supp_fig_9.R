@@ -20,7 +20,7 @@ make_figure_S9 <- function(sweep_results = NULL){
     filter(sim < 50) %>%
     ggplot(aes(x=week,y=cumulative,col=as.factor(extinct),group=sim)) + geom_line(alpha=0.6) +
     cowplot::theme_cowplot() + coord_cartesian(ylim=c(0,1000),xlim=c(0,16)) +
-    scale_color_manual(name="Simulation controlled",values=c("dodgerblue1"),guide="none") +
+    scale_color_manual(name="Simulation controlled",values=c("firebrick", "dodgerblue1"),guide="none") +
     ylab("Cumulative cases") +
     ggtitle("R0 = 1.5") +
     xlab("Outbreak week")
