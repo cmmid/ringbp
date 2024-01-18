@@ -36,7 +36,8 @@ Imports:
     sn,
     cowplot,
     purrr,
-    tibble
+    tibble,
+    ggrepel
 Suggests:
     future
 Remotes:
