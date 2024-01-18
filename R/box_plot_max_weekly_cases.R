@@ -13,8 +13,9 @@
 #' @param num_initial_cases filters by the number of initial cases in the scenario; default is 40
 #' @param record_params option to display the params as a caption (used for testing); default FALSE
 #' @param y_lim Numeric the limit of the y axis to show.
+#' @importFrom ringbp extinct_prob detect_extinct
 #' @importFrom ggrepel geom_label_repel
-#' @importFrom dplyr group_by mutate ungroup filter mutate left_join summarise select
+#' @importFrom dplyr group_by mutate ungroup filter mutate left_join summarise select %>%
 #' @importFrom tidyr unnest
 #' @importFrom cowplot theme_minimal_hgrid panel_border
 #' @importFrom ggplot2 ggplot aes stat_summary facet_grid vars scale_fill_gradient scale_y_continuous scale_x_discrete theme_bw theme labs ggtitle coord_flip
