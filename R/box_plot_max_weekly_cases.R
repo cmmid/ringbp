@@ -43,10 +43,10 @@
 #' non_list_cols <- setdiff(colnames(scenarios), list_cols)
 #'
 #' expanded_groups <- scenarios[, rbindlist(delay_group), by = c(non_list_cols)]
-#' scenarios2 <- scenarios[, rbindlist(k_group), by = c(non_list_cols)]
+#' expanded_k <- scenarios[, rbindlist(k_group), by = c(non_list_cols)]
 #'
 #' scenarios <- merge(
-#'   scenarios, scenarios2, by = non_list_cols, allow.cartesian = TRUE
+#'   expanded_groups, expanded_k, by = non_list_cols, allow.cartesian = TRUE
 #' )
 #' scenarios[, scenario :=  1:.N]
 #'
