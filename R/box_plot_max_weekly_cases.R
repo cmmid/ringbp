@@ -106,8 +106,6 @@ box_plot_max_weekly_cases <- function(results = NULL,
     tidyr::unnest(c("sum_meas", "data")) %>%
     dplyr::select(-sims)
 
-
-
   ## Clean data
   df <- filt_results %>%
     dplyr::filter(control_effectiveness >= filt_control_effectiveness) %>%
