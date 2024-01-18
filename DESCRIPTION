@@ -41,4 +41,4 @@ Imports:
 Suggests:
     future
 Remotes:
-    epiforecasts/ringbp@v0.1.1
+    epiforecasts/ringbp@v0.1.2
