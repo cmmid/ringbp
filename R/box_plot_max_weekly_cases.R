@@ -103,7 +103,7 @@ box_plot_max_weekly_cases <- function(results = NULL,
     ) %>%
     dplyr::select(-extinct) %>%
     dplyr::ungroup() %>%
-    tidyr::unnest(c("sum_meas")) %>%
+    tidyr::unnest(c("sum_meas", "data")) %>%
     dplyr::select(-sims)
 
 
